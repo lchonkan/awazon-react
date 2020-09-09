@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+#AWAZON
+
+## Description
+
+This is a sample project created for the React JS challenge on cleverprogrammer.com
+
 ## Available Scripts
 
 In the project directory, you can run:
