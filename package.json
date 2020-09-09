@@ -1,6 +1,7 @@
 {
   "name": "react-amazon-clone",
   "version": "0.1.0",
+  "author": "Leonardo Chonkan",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
