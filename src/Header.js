@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
 
 function Header() {
+    // eslint-disable-next-line no-unused-vars
     const [{ basket }, dispatch] = useStateValue();
 
     return (

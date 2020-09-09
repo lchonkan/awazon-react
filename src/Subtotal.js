@@ -4,6 +4,7 @@ import CurrencyFormat from 'react-currency-format';
 import { useStateValue } from './StateProvider';
 
 function Subtotal() {
+    // eslint-disable-next-line no-unused-vars
     const [{ basket }, dispatch] = useStateValue();
 
     function addTotal(basket) {
