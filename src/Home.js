@@ -31,7 +31,7 @@ export default function Home() {
                         rating={5}
                     />
                     <Product
-                        id='494803850'
+                        id='23243246'
                         title='Dash Mini Maker: The Mini Waffle Maker Machine. Yes, you need one.'
                         price={59.99}
                         image={
@@ -55,7 +55,30 @@ export default function Home() {
                 </div>
 
                 {/*final row*/}
-                <div className='home__row'></div>
+                <div className='home__row'>
+                    <div className='home__row'>
+                        <Product
+                            id='494803850'
+                            title='Dash Mini Maker: The Mini Waffle Maker Machine. Yes, you need one.'
+                            price={59.99}
+                            image={
+                                'https://images-na.ssl-images-amazon.com/images/I/81Puyv5n7BL._AC_SL1500_.jpg'
+                            }
+                            rating={5}
+                        />
+                    </div>
+                    <div className='home__row'>
+                        <Product
+                            id='494803850'
+                            title='Dash Mini Maker: The Mini Waffle Maker Machine. Yes, you need one.'
+                            price={59.99}
+                            image={
+                                'https://images-na.ssl-images-amazon.com/images/I/81Puyv5n7BL._AC_SL1500_.jpg'
+                            }
+                            rating={5}
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     );
