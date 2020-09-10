@@ -2,5 +2,100 @@ body {
     background-color: white;
 }
 
+.login {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .login__logo {
+    margin: 20px auto;
+    object-fit: contain;
+    width: 140px;
+}
+
+.login__container {
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding: 20px;
+}
+
+.login__containerBreak {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    align-items: center;
+}
+.login__containerBreakLine > h5 {
+    line-height: 1;
+    font-size: 12px;
+    color: #767676;
+    font-weight: 400;
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    padding: 0 8px 0 7px;
+}
+
+
+
+.login__containerBreakLine {
+}
+
+.login__container > h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.login__container > form > h5 {
+    margin-bottom: 5px;
+}
+.login__container > form > input {
+    height: 30px;
+    background-color: white;
+    width: 98%;
+    margin-bottom: 10px;
+
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), 0 1px 0 rgba(0, 0, 0, 0.07) inset;
+    outline: 0;
+    outline-color: initial;
+    outline-style: initial;
+    outline-width: 0px;
+}
+
+.login__container > p {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.login__signInButton {
+    background: #f0c14b;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    height: 30px;
+    padding: 2px 5px;
+    width: 100%;
+    border-radius: 3px;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+}
+
+.login__registerButton {
+    /* //background: #f0c14b; */
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    height: 30px;
+    padding: 2px 0px;
+    width: 100%;
+    border-radius: 3px;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
 }
