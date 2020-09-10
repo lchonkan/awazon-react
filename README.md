@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # AWAZON
 
+![Image of Yaktocat](https://github.com/lchonkan/awazon-react/blob/master/public/images/social/social_awazon.PNG)
+
 ## Description
 
 This is a sample project created for the React JS challenge on cleverprogrammer.com
