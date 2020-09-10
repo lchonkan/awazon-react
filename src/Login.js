@@ -1,19 +1,32 @@
 import React, { useState } from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { auth } from './firebase';
 
 function Login() {
+    const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const signIn = (e) => {
         e.preventDefault();
-        //Todo some fancy firebase shiiiiiiiiiiiiiiit
+        auth.signInWithEmailAndPassword(email, password)
+            .then((auth) => {
+                history.push('/');
+            })
+            .catch((err) => alert(err));
     };
 
     const register = (e) => {
         e.preventDefault();
-        //Todo resgister logic (firebase)
+        auth.createUserWithEmailAndPassword(email, password)
+            .then((auth) => {
+                console.log(auth);
+                if (auth) {
+                    history.push('/');
+                }
+            })
+            .catch((error) => alert(error.message));
     };
 
     return (
@@ -40,7 +53,7 @@ function Login() {
                         <input
                             type='password'
                             value={password}
-                            onChange={(e) => setEmail(e.target.password)}
+                            onChange={(e) => setPassword(e.target.value)}
                         />
                         <button onClick={signIn} className='login__signInButton'>
                             Continue
