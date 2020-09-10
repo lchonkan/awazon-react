@@ -54,7 +54,8 @@
 }
 
 .header__optionLineOne {
-    font-size: 10px;
+    font-weight: 600;
+    font-size: 12px;
 }
 
 .header__optionLineTwo {
