@@ -6,7 +6,7 @@ import { useStateValue } from './StateProvider';
 
 function Checkout() {
     // eslint-disable-next-line no-unused-vars
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
 
     return (
         <div className='checkout'>
@@ -17,6 +17,9 @@ function Checkout() {
                     alt=''
                 />
                 <div>
+                    {/*  ---Did not use the ? sign because the error was caused by the page refreshing on the local host without having the context
+                    // It does work if you go to your cart from the home page */}
+                    <h3>Hello, {user.email}</h3>
                     <h2 className='checkout__title'>Your Shopping Basket</h2>
 
                     {/* //info this is for automatically loading stuff from the basket, disabled for styling */}
