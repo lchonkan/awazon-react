@@ -6,11 +6,92 @@ export default function Home() {
     return (
         <div className='home'>
             <div className='home__container'>
-                <img
-                    className='home__image'
-                    src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Home_es_US_1x._CB428980075_.jpg'
-                    alt='banner-1'
-                />
+                {/* Carousel */}
+                <section class='carousel' aria-label='Gallery'>
+                    <ol class='carousel__viewport'>
+                        <li id='carousel__slide1' tabindex='0' class='carousel__slide'>
+                            <img
+                                className='home__image'
+                                src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Home_es_US_1x._CB428980075_.jpg'
+                                alt='banner-1'
+                            />
+                            <div class='carousel__snapper'>
+                                <a href='#carousel__slide4' class='carousel__prev'>
+                                    Go to last slide
+                                </a>
+                                <a href='#carousel__slide2' class='carousel__next'>
+                                    Go to next slide
+                                </a>
+                            </div>
+                        </li>
+                        <li id='carousel__slide2' tabindex='0' class='carousel__slide'>
+                            <img
+                                className='home__image'
+                                src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Computers_1x._CB432469755_.jpg'
+                                alt='banner-1'
+                            />
+                            <div class='carousel__snapper'></div>
+                            <a href='#carousel__slide1' class='carousel__prev'>
+                                Go to previous slide
+                            </a>
+                            <a href='#carousel__slide3' class='carousel__next'>
+                                Go to next slide
+                            </a>
+                        </li>
+                        <li id='carousel__slide3' tabindex='0' class='carousel__slide'>
+                            <img
+                                className='home__image'
+                                src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Sports_en_US_1x._CB431860448_.jpg'
+                                alt='banner-1'
+                            />
+                            <div class='carousel__snapper'></div>
+                            <a href='#carousel__slide2' class='carousel__prev'>
+                                Go to previous slide
+                            </a>
+                            <a href='#carousel__slide4' class='carousel__next'>
+                                Go to next slide
+                            </a>
+                        </li>
+                        <li id='carousel__slide4' tabindex='0' class='carousel__slide'>
+                            <img
+                                className='home__image'
+                                src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Sports_en_US_1x._CB431860448_.jpg'
+                                alt='banner-1'
+                            />
+                            <div class='carousel__snapper'></div>
+                            <a href='#carousel__slide3' class='carousel__prev'>
+                                Go to previous slide
+                            </a>
+                            <a href='#carousel__slide1' class='carousel__next'>
+                                Go to first slide
+                            </a>
+                        </li>
+                    </ol>
+                    <aside class='carousel__navigation'>
+                        <ol class='carousel__navigation-list'>
+                            <li class='carousel__navigation-item'>
+                                <a href='#carousel__slide1' class='carousel__navigation-button'>
+                                    Go to slide 1
+                                </a>
+                            </li>
+                            <li class='carousel__navigation-item'>
+                                <a href='#carousel__slide2' class='carousel__navigation-button'>
+                                    Go to slide 2
+                                </a>
+                            </li>
+                            <li class='carousel__navigation-item'>
+                                <a href='#carousel__slide3' class='carousel__navigation-button'>
+                                    Go to slide 3
+                                </a>
+                            </li>
+                            <li class='carousel__navigation-item'>
+                                <a href='#carousel__slide4' class='carousel__navigation-button'>
+                                    Go to slide 4
+                                </a>
+                            </li>
+                        </ol>
+                    </aside>
+                </section>
 
                 {/*first row*/}
                 <div className='home__row'>
@@ -39,10 +120,28 @@ export default function Home() {
                         }
                         rating={5}
                     />
+                    <Product
+                        id='23243246'
+                        title='Dash Mini Maker: The Mini Waffle Maker Machine. Yes, you need one.'
+                        price={59.99}
+                        image={
+                            'https://images-na.ssl-images-amazon.com/images/I/81Puyv5n7BL._AC_SL1500_.jpg'
+                        }
+                        rating={5}
+                    />
                 </div>
 
                 {/*second row*/}
                 <div className='home__row'>
+                    <Product
+                        id='494803850'
+                        title='Dash Mini Maker: The Mini Waffle Maker Machine. Yes, you need one.'
+                        price={59.99}
+                        image={
+                            'https://images-na.ssl-images-amazon.com/images/I/81Puyv5n7BL._AC_SL1500_.jpg'
+                        }
+                        rating={5}
+                    />
                     <Product
                         id='494803850'
                         title='Dash Mini Maker: The Mini Waffle Maker Machine. Yes, you need one.'
