@@ -17,10 +17,15 @@ function Product({ id, title, image, price, rating }) {
                 title: title,
                 image: image,
                 price: price,
-                ratin: rating,
+                rating: rating,
             },
         });
     };
+
+    // This piece of code is to break down the price for proper styling
+    const priceComponents = price.toString().split('.');
+    const dollars = priceComponents[0];
+    const cents = priceComponents[1];
 
     return (
         <div className='product'>
@@ -28,7 +33,8 @@ function Product({ id, title, image, price, rating }) {
                 <p>{title}</p>
                 <p className='product__price'>
                     <sup>$</sup>
-                    <strong>{price}</strong>
+                    <strong>{dollars}</strong>
+                    <sup>{cents}</sup>
                 </p>
                 <div className='product__rating'>
                     {Array(rating)

@@ -22,10 +22,13 @@
 .product__price {
     margin-top: 5px;
 }
+.product__price > strong {
+    font-size: 20px;
+}
 
 .product__price > sup {
     vertical-align: text-top;
-    font-size: smaller;
+    font-size: 12px;
 }
 
 .product__rating {
