@@ -4,6 +4,7 @@ import StarIcon from '@material-ui/icons/Star';
 import { useStateValue } from './StateProvider';
 
 function Product({ id, title, image, price, rating }) {
+    // eslint-disable-next-line no-unused-vars
     const [{ basket }, dispatch] = useStateValue();
 
     //console.log('this is the basket >>>', basket);
