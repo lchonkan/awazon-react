@@ -22,15 +22,6 @@
     object-fit: contain;
 }
 
-.checkoutProduct__rating {
-    display: flex;
-}
-
-
-.checkoutProduct__rating > .star {
-    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
-}
-
 .checkoutProduct__title {
     font-size: 17px;
     font-weight: 800;
@@ -39,9 +30,25 @@
 .checkoutProduct_price > sup {
     vertical-align: text-top;
     font-size: 12px;
-
 }
 
 .checkoutProduct_price > strong {
     font-size: 20px;
+}
+
+.checkoutProduct__rating {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkoutProduct__rating > .star {
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+}
+.star {
+    max-height: 17px;
+    stroke: #111;
+    stroke-opacity: 50%;
+    color: #ffcc00;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+    margin: 10px -3px;
 }

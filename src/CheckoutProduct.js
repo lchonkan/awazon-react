@@ -28,7 +28,7 @@ function CheckoutProduct({ id, image, title, price, rating }) {
                     <sup>{cents}</sup>
                 </p>
                 <div className='checkoutProduct__rating'>
-                    {Array({ rating })
+                    {Array(rating)
                         .fill()
                         .map((_, i) => (
                             <StarIcon className='star'></StarIcon>
