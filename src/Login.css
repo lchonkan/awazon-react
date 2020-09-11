@@ -30,22 +30,6 @@ body {
     padding-top: 10px;
     align-items: center;
 }
-.login__containerBreakLine > h5 {
-    line-height: 1;
-    font-size: 12px;
-    color: #767676;
-    font-weight: 400;
-    z-index: 2;
-    position: relative;
-    display: inline-block;
-    background-color: #fff;
-    padding: 0 8px 0 7px;
-}
-
-
-
-.login__containerBreakLine {
-}
 
 .login__container > h1 {
     font-weight: 500;
@@ -91,11 +75,34 @@ body {
 .login__registerButton {
     /* //background: #f0c14b; */
     border: 1px solid;
-    margin-top: 10px;
+    margin-top: 1px;
     border-color: #adb1b8 #a2a6ac #8d9096;
     height: 30px;
-    padding: 2px 0px;
+    padding: 0px 0px;
     width: 100%;
     border-radius: 3px;
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+}
+
+.login__containerBreakLine > h5 {
+    line-height: 0.1em;
+    width: 100%;
+    font-size: 12px;
+    color: #767676;
+    font-weight: 400;
+    /* z-index: 2; */
+    /* position: relative; */
+    /* display: inline-block; */
+    background-color: #fff;
+    padding: 0 80px 0 80px;
+
+    border-bottom: 1px solid #a3a3a3;
+    margin: 10px 0 20px;
+    text-align: center;
+}
+
+h5 span {
+    background: #fff;
+    padding: 0 10px;
+    padding-bottom: 20px;
 }

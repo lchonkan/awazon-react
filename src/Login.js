@@ -67,7 +67,9 @@ function Login() {
 
                 <div className='login__containerBreak'>
                     <div className='login__containerBreakLine'>
-                        <h5>New to Awazon?</h5>
+                        <h5>
+                            <span>New to Awazon?</span>
+                        </h5>
                     </div>
 
                     <button onClick={register} className='login__registerButton'>
