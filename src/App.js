@@ -8,6 +8,13 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { auth } from './firebase';
 import { useStateValue } from './StateProvider';
 import Payment from './Payment';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+
+//this is using the public KEY from stripe
+const promise = loadStripe(
+    'pk_test_51HQOOQCR9gq5myvaxAvgKTwAwkxmJnpLFi8psVZLh7iL3836rli49brYPFdUKJQTFdyApvpx7aFxVfkoEI3EdVei00sDeOsv0K'
+);
 
 function App() {
     // eslint-disable-next-line no-empty-pattern
@@ -45,8 +52,9 @@ function App() {
 
                     <Route path='/payment'>
                         <Header />
-                        <Payment />
-
+                        <Elements stripe={promise}>
+                            <Payment />
+                        </Elements>
                     </Route>
 
                     <Route path='/checkout'>
