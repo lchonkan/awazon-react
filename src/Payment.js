@@ -58,10 +58,8 @@ function Payment() {
                 setsucceeded(true);
                 setError(null);
                 setprocessing(false);
-
-                dispatch({ type: 'EMPTY_BASKET' });
-
                 history.replace('/orders');
+                dispatch({ type: 'EMPTY_BASKET' });
             });
     };
 

@@ -150,3 +150,21 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"Finished \"api\" in ~1s"}}
 [debug] [2020-09-12T06:57:54.881Z] [worker-api-4d02c1af-2d5a-4a49-8d8a-e2c9d3c5d866]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-api-4d02c1af-2d5a-4a49-8d8a-e2c9d3c5d866]: IDLE"}}
 [debug] [2020-09-12T06:57:54.881Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-09-12T07:05:09.602Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-09-12T07:05:09.602Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-09-12T07:05:09.602Z] Accepted request POST /clo-15d92/us-central1/api/payments/create?total=48896 --> api
+[debug] [2020-09-12T07:05:09.602Z] [worker-pool] submitWork(triggerId=api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=api)"}}
+[debug] [2020-09-12T07:05:09.602Z] [worker-api-4d02c1af-2d5a-4a49-8d8a-e2c9d3c5d866]: Assigning socketPath: \\?\pipe\C:\source\react-challenge\amazon-clone\functions\14012 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-api-4d02c1af-2d5a-4a49-8d8a-e2c9d3c5d866]: Assigning socketPath: \\\\?\\pipe\\C:\\source\\react-challenge\\amazon-clone\\functions\\14012"}}
+[debug] [2020-09-12T07:05:09.602Z] [worker-api-4d02c1af-2d5a-4a49-8d8a-e2c9d3c5d866]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-api-4d02c1af-2d5a-4a49-8d8a-e2c9d3c5d866]: BUSY"}}
+[debug] [2020-09-12T07:05:09.603Z] [runtime-status] [14012] Trigger "api" has been found, beginning invocation! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [14012] Trigger \"api\" has been found, beginning invocation!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"Beginning execution of \"api\""}}
+[debug] [2020-09-12T07:05:09.604Z] [runtime-status] [14012] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [14012] triggerDefinition {\"httpsTrigger\":{},\"name\":\"api\",\"entryPoint\":\"api\"}"}}
+[debug] [2020-09-12T07:05:09.604Z] [runtime-status] [14012] Running api in mode HTTPS {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [14012] Running api in mode HTTPS"}}
+[debug] [2020-09-12T07:05:09.604Z] [runtime-status] [14012] Attempting to listen to socketPath: \\?\pipe\C:\source\react-challenge\amazon-clone\functions\14012 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [14012] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\source\\react-challenge\\amazon-clone\\functions\\14012"}}
+[debug] [2020-09-12T07:05:09.606Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2020-09-12T07:05:09.607Z] [runtime-status] [14012] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [14012] Ephemeral server handling POST request"}}
+[info] >  Payment request received BOOOM! for this amout >>> 48896 {"user":"Payment request received BOOOM! for this amout >>> 48896","metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"\u001b[90m> \u001b[39m Payment request received BOOOM! for this amout >>> 48896"}}
+[debug] [2020-09-12T07:05:09.616Z] [runtime-status] [14012] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [14012] Ephemeral server survived."}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"Finished \"api\" in ~1s"}}
+[debug] [2020-09-12T07:05:10.186Z] [worker-api-4d02c1af-2d5a-4a49-8d8a-e2c9d3c5d866]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-api-4d02c1af-2d5a-4a49-8d8a-e2c9d3c5d866]: IDLE"}}
+[debug] [2020-09-12T07:05:10.186Z] [work-queue] {"queueLength":0,"workRunningCount":0}
