@@ -29,16 +29,18 @@ function Payment() {
 
         const getClientSecret = async () => {
             const response = await axios({
-                method: 'POST',
+                method: 'post',
                 //Stripe expects the total in a currencies subunits
-                url: `/payments/create?total=${addTotal(basket) * 100}`,
+                url: `/payments/create?total=${parseInt(+addTotal(basket) * 100)}`,
             });
 
             setClientSecret(response.data.clientSecret);
         };
 
         getClientSecret();
-    });
+    }, [basket]);
+
+    console.log('THE SECRET IS >>>>> ', clientSecret);
 
     const handleSubmit = async (event) => {
         // do all the fancy stripe stuff
