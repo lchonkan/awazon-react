@@ -15,9 +15,11 @@ export async function getAddressFromCoordinates(coords) {
         if (data.error_message) {
             throw new Error(data.error_message);
         }
+        const city = data.results[0].address_components[1].long_name;
+        const country = data.results[0].address_components[2].short_name;
 
-        const address = data.results[4].formatted_address;
-        console.log(data);
+        const address = city + ', ' + country;
+
         return address;
     } catch (error) {
         console.log(error);
