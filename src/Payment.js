@@ -11,7 +11,11 @@ function Payment() {
     return (
         <div className='payment'>
             <div className='payment__container'>
-                Checkout (<Link to='/checkout'></Link>){/* Payment Section - delivery addres*/}
+                <h1>
+                    Checkout (<Link to='/checkout'>{basket?.length}</Link>)
+                </h1>
+
+                {/* Payment Section - delivery addres*/}
                 <div className='payment__section'>
                     <div className='payment__title'>
                         <h3>Delivery Address</h3>
@@ -23,23 +27,27 @@ function Payment() {
                     </div>
                 </div>
                 {/*  Payment Section - Review Items */}
-                <div className='payment__section'></div>
-                <div className='payment__title'>
-                    <h3>Review Items and Delivery</h3>
-                </div>
-                <div className='payment__items'>
-                    {basket.map((item) => (
-                        <CheckoutProduct
-                            id={item.id}
-                            title={item.title}
-                            image={item.image}
-                            price={item.price}
-                        />
-                    ))}
+                <div className='payment__section'>
+                    <div className='payment__title'>
+                        <h3>Review Items and Delivery</h3>
+                    </div>
+                    <div className='payment__items'>
+                        {basket.map((item) => (
+                            <CheckoutProduct
+                                id={item.id}
+                                title={item.title}
+                                image={item.image}
+                                price={item.price}
+                            />
+                        ))}
+                    </div>
                 </div>
                 {/* Payment section - Payment method */}
                 <div className='payment__section'>
-                    <div className='payment__details'>{/* Stripe magic will go in here */}</div>
+                    <div className='payment__details'>
+                        <h3>Payment Method</h3>
+                        {/* Stripe magic will go in here */}
+                    </div>
                 </div>
             </div>
         </div>
