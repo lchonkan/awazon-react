@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Payment.css';
 import { useStateValue } from './StateProvider';
 import CheckoutProduct from './CheckoutProduct';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
+import axios from './axios';
+import { PostAdd } from '@material-ui/icons';
 
 function Payment() {
+    // This is for the checkout page
+    const history = useHistory();
+
     // eslint-disable-next-line no-unused-vars
     const [{ basket, user }, dispatch] = useStateValue();
 
@@ -17,9 +22,42 @@ function Payment() {
     const [succeeded, setsucceeded] = useState();
     const [error, setError] = useState(null);
     const [disabled, setDisabled] = useState(true);
+    const [clientSecret, setClientSecret] = useState();
 
-    const handleSubmit = (e) => {
+    useEffect(() => {
+        //generate the special stripe secret
+
+        const getClientSecret = async () => {
+            const response = await axios({
+                method: 'POST',
+                //Stripe expects the total in a currencies subunits
+                url: `/payments/create?total=${addTotal(basket) * 100}`,
+            });
+
+            setClientSecret(response.data.clientSecret);
+        };
+
+        getClientSecret();
+    });
+
+    const handleSubmit = async (event) => {
         // do all the fancy stripe stuff
+        event.preventDefault();
+        setprocessing(true);
+
+        const payload = await stripe
+            .confirmCardPayment(clientSecret, {
+                payment_method: {
+                    card: elements.getElement(CardElement),
+                },
+            })
+            .then(({ paymentIntent }) => {
+                //paymentIntent = payment confirmation
+                setsucceeded(true);
+                setError(null);
+                setprocessing(false);
+                history.replace('/orders');
+            });
     };
 
     const handleChange = (e) => {
