@@ -55,7 +55,7 @@ export default function Home() {
                         <li id='carousel__slide4' tabindex='0' class='carousel__slide'>
                             <img
                                 className='home__image'
-                                src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Sports_en_US_1x._CB431860448_.jpg'
+                                src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Beauty_v2_en_US_1x._CB429089975_.jpg'
                                 alt='banner-1'
                             />
                             <div class='carousel__snapper'></div>
@@ -120,19 +120,19 @@ export default function Home() {
                         }
                         rating={5}
                     />
-                    <Product
-                        id='23243246'
-                        title='Dash Mini Maker: The Mini Waffle Maker Machine. Yes, you need one.'
-                        price={59.99}
-                        image={
-                            'https://images-na.ssl-images-amazon.com/images/I/81Puyv5n7BL._AC_SL1500_.jpg'
-                        }
-                        rating={5}
-                    />
                 </div>
 
                 {/*second row*/}
                 <div className='home__row'>
+                    <Product
+                        id='2324321216'
+                        title='AmazonBasics Small Digital Alarm Clock with Nightlight and Battery Backup, LED Display'
+                        price={9.99}
+                        image={
+                            'https://images-na.ssl-images-amazon.com/images/I/61j17FjPhtL._AC_SL1500_.jpg'
+                        }
+                        rating={5}
+                    />
                     <Product
                         id='494803850'
                         title='Dash Mini Maker: The Mini Waffle Maker Machine. Yes, you need one.'
@@ -157,22 +157,13 @@ export default function Home() {
                 <div className='home__row'>
                     <div className='home__row'>
                         <Product
-                            id='494803850'
-                            title='Dash Mini Maker: The Mini Waffle Maker Machine. Yes, you need one.'
-                            price={59.99}
+                            id='494832203850'
+                            title='
+                            Peplink SUS-SOHO-T Pepwave Surf Soho MK3 Router. Concurrent Dual-Band 802.11ac Wi-Fi with 3x3 MIMO
+                            .'
+                            price={199.0}
                             image={
-                                'https://images-na.ssl-images-amazon.com/images/I/81Puyv5n7BL._AC_SL1500_.jpg'
-                            }
-                            rating={5}
-                        />
-                    </div>
-                    <div className='home__row'>
-                        <Product
-                            id='494803850'
-                            title='Dash Mini Maker: The Mini Waffle Maker Machine. Yes, you need one.'
-                            price={59.99}
-                            image={
-                                'https://images-na.ssl-images-amazon.com/images/I/81Puyv5n7BL._AC_SL1500_.jpg'
+                                'https://images-na.ssl-images-amazon.com/images/I/61qhtYfn%2BfL._AC_SL1500_.jpg'
                             }
                             rating={5}
                         />
