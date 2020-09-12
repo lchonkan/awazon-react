@@ -11,6 +11,7 @@ import Payment from './Payment';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import Orders from './Orders';
+import  Toolbar from './Toolbar';
 
 //this is using the public KEY from stripe
 const promise = loadStripe(
@@ -70,6 +71,7 @@ function App() {
                     {/* This is the default route. Always make sure is on the bottom */}
                     <Route path='/'>
                         <Header />
+                        <Toolbar />
                         <Home />
                     </Route>
                 </Switch>
