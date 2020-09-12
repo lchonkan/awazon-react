@@ -33,6 +33,7 @@
 
 .payment__details > form {
     max-width: 400px;
+    margin: 10px;
 }
 
 .payment__details > h3 {
@@ -49,4 +50,8 @@
     margin-top: 10px;
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
+}
+
+#total {
+    margin-top: 20px;
 }

@@ -10,6 +10,7 @@ import { useStateValue } from './StateProvider';
 import Payment from './Payment';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
+import Orders from './Orders';
 
 //this is using the public KEY from stripe
 const promise = loadStripe(
@@ -48,6 +49,11 @@ function App() {
                 <Switch>
                     <Route path='/login'>
                         <Login />
+                    </Route>
+
+                    <Route path='/orders'>
+                        <Header />
+                        <Orders />
                     </Route>
 
                     <Route path='/payment'>

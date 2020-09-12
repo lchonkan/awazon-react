@@ -6,7 +6,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import axios from './axios';
-import { PostAdd } from '@material-ui/icons';
+import { db } from './firebase';
 
 function Payment() {
     // This is for the checkout page
@@ -29,16 +29,19 @@ function Payment() {
 
         const getClientSecret = async () => {
             const response = await axios({
-                method: 'POST',
+                method: 'post',
                 //Stripe expects the total in a currencies subunits
-                url: `/payments/create?total=${addTotal(basket) * 100}`,
+                url: `/payments/create?total=${parseInt(+addTotal(basket) * 100)}`,
             });
 
             setClientSecret(response.data.clientSecret);
         };
 
         getClientSecret();
-    });
+    }, [basket]);
+
+    console.log('THE SECRET IS >>>>> ', clientSecret);
+    //console.log(user);
 
     const handleSubmit = async (event) => {
         // do all the fancy stripe stuff
@@ -53,10 +56,22 @@ function Payment() {
             })
             .then(({ paymentIntent }) => {
                 //paymentIntent = payment confirmation
+
+                db.collection('users')
+                    .doc(user?.uid)
+                    .collection('/orders')
+                    .doc(paymentIntent.id)
+                    .set({
+                        basket: basket,
+                        amount: paymentIntent.amount,
+                        created: paymentIntent.created,
+                    });
+
                 setsucceeded(true);
                 setError(null);
                 setprocessing(false);
                 history.replace('/orders');
+                dispatch({ type: 'EMPTY_BASKET' });
             });
     };
 
@@ -106,6 +121,7 @@ function Payment() {
                                 title={item.title}
                                 image={item.image}
                                 price={item.price}
+                                rating={item.rating}
                             />
                         ))}
                     </div>
@@ -123,7 +139,7 @@ function Payment() {
                                 <CurrencyFormat
                                     renderText={(value) => (
                                         <>
-                                            <h3> Order Total: {value}</h3>
+                                            <h3 id='total'> Order Total: {value}</h3>
                                         </>
                                     )}
                                     decimalScale={2}

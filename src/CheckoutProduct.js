@@ -3,7 +3,7 @@ import './CheckoutProduct.css';
 import StarIcon from '@material-ui/icons/Star';
 import { useStateValue } from './StateProvider';
 
-function CheckoutProduct({ id, image, title, price, rating }) {
+function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
     // This piece of code is to break down the price for proper styling
     const priceComponents = price.toString().split('.');
     const dollars = priceComponents[0];
@@ -34,7 +34,7 @@ function CheckoutProduct({ id, image, title, price, rating }) {
                             <StarIcon className='star'></StarIcon>
                         ))}
                 </div>
-                <button onClick={removeFromBasket}>Remove from Basket</button>
+                {!hideButton && <button onClick={removeFromBasket}>Remove from Basket</button>}
             </div>
         </div>
     );
