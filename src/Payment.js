@@ -121,6 +121,7 @@ function Payment() {
                                 title={item.title}
                                 image={item.image}
                                 price={item.price}
+                                rating={item.rating}
                             />
                         ))}
                     </div>
@@ -138,7 +139,7 @@ function Payment() {
                                 <CurrencyFormat
                                     renderText={(value) => (
                                         <>
-                                            <h3> Order Total: {value}</h3>
+                                            <h3 id='total'> Order Total: {value}</h3>
                                         </>
                                     )}
                                     decimalScale={2}

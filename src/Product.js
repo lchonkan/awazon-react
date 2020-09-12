@@ -3,7 +3,7 @@ import './Product.css';
 import StarIcon from '@material-ui/icons/Star';
 import { useStateValue } from './StateProvider';
 
-function Product({ id, title, image, price, rating }) {
+function Product({ id, title, image, price, rating, hideButton }) {
     // eslint-disable-next-line no-unused-vars
     const [{ basket }, dispatch] = useStateValue();
 
