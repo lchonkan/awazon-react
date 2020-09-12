@@ -8,6 +8,7 @@ function Checkout() {
     // eslint-disable-next-line no-unused-vars
     const [{ basket, user }, dispatch] = useStateValue();
 
+
     return (
         <div className='checkout'>
             <div className='checkout__left'>
